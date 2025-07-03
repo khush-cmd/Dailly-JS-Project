@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: rgb(229, 227, 227);
+    font-family: 'Segoe UI', sans-serif;
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.stop-card{
+    background: #fff;
+    max-width: 500px;
+    padding: 20px;
+    max-height: 250px;
+    /* box-shadow: offset-x offset-y blur-radius spread-radius color; */
+    box-shadow: 1px 1px 4px 3px rgb(59, 57, 57,0.3);
+    border-radius:14px;
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+h2{
+    font-size: 43px;
+}
+.stop-button{
+    /* text-align: center; */
+    display: flex;
+    margin-bottom: 23px;
+
+}
+.btn{
+    padding: 5px;
+    margin: 20px;
+    cursor: pointer;
+
+}
+
+#startBtn{
+    background: rgb(44, 170, 44);
+    padding: 9px 22px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 18px;
+}
+#stopBtn{
+    background: rgb(248, 161, 0);
+    padding: 9px 22px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 18px;
+}
+#resetBtn{
+    background: rgb(231, 63, 8);
+    padding: 9px 12px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 18px;
+}

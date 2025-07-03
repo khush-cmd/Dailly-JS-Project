@@ -1,0 +1,57 @@
+1. Step by step : how to start thinking in logic
+Step 1. understand the goal 
+Before writing logic, ask:
+What do i want to show? 
+What do i want to change? 
+for example:  To make a StopWatch I want to show time on screen in minutes and seconds format, and update it every second. 
+
+
+2. Step 2. Think in variable 
+What do i need to store? 
+What data keeps changing? 
+
+
+Example : this is for StopWatch 
+3. Break the problem into tiny steps
+For updateTime();
+1. Take total seconds -> (75)
+2 . calculate how many minutes  -> (75 / 60) = 1
+3. calculate how many minutes -> (75 % 60) = 15
+4. calculate how many hours -> 
+4. Foramt both as 2 digits 
+5. Show it on screen
+
+
+
+The common function used in website 
+
+setInterval()  : Runs a function again and again after every time     
+
+clearInterval() : stops the repeating action started by setInterval
+
+querySelector() : selects the first element with class started
+
+addEventListener() : Runs your function when an events happens
+
+Math.floor()  : Rounds a number down to the nearest whole number Math.floor(2.8) -> 3
+
+padStart() : Adds characters at the beginning of a string until it reaches the given length   
+string.padStart(totalLength, characterToAdd)
+"5".padStart(2,'0')
+5 is just 1 charcter long
+We want it to be 2 characters long 
+So it add one '0' in front->become "05"
+
+
+
+
+Local Stroage : local storage is a built-in Web Api that lets your website store data in browser even after the page is reloaded or the broweser is closed
+The data stays until you manually delete it
+
+Basic Operation 
+1. Save Something : localStorage.setItem("key","value");  {Example : localStorage.setItem("Username","khushi")};
+2. Get Something : localStorage.getItem("username");
+3. Remove : localStorage.removeItem("username");
+4. Clear : localStorage.clear();
+5. JSON.stringify(obj) => (obj->string)
+6. JSON.parse(string) => (string->obj)

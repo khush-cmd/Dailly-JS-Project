@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to right , rgb(22, 177, 211) ,rgb(68, 68, 222));
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.todo-container{
+    background: #fff;
+    width: 400px;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+
+}
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 34px;
+    margin-bottom: 20px;
+}
+.input-group input{
+    margin-bottom: 20px;
+    border: 1.5px solid grey;
+    border-radius: 5px;
+    font-size: 12px;
+}
+#todo-text{
+    padding: 12px;
+}
+#input-time{
+    padding: 7px;
+}
+.add-btn{
+    height: 30px;
+    background: rgb(4, 106, 169);
+    color: white;
+    border-radius: 6px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+.add-btn:hover{
+    background: rgb(2,86,138);
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.2s ease;
+}
+
+#task{
+    list-style: none;
+    padding: 0 34px 20px 34px;
+    max-height: 200px;
+    overflow-y: auto; 
+    /* agar content height se bhi jayda hojaye toh scroll bar add kar dega */
+
+}
+#task li{
+    background-color: #f0f8ff;
+    border-left: 5px solid rgb(4, 106, 169);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+}

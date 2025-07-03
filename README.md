@@ -30,7 +30,8 @@ Named by day/project for clarity.
 | Day | Project Name   | Description                      |
 |-----|----------------|----------------------------------|
 | 1   | To-Do List     | Add/delete tasks with time       |
-| 2   | Coming soon... | 🔧 Working on next                |
+| 2   | Stopwatch      | Start, stop, reset stopwatch     |
+|     |                 timer                             |
 
 ---
 

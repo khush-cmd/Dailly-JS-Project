@@ -10,8 +10,8 @@
     <div class="calculator">
         <div class="display" id="display">0</div>
         <div class="button">
-           <button class="clear" onclick="clearDisplay()">C</button>
-           <button class="delete" onclick="deleteBtn()">DEL</button>
+           <button id="clear" onclick="clearDisplay()">C</button>
+           <button id="delete" onclick="deleteBtn()">DEL</button>
             <button onclick="appendToDisplay('(')">(</button>
             <button onclick="appendToDisplay(')')">)</button>
             <button class="operator" onclick="appendToDisplay('/')">÷</button>
@@ -29,8 +29,9 @@
             <button class="operator" onclick="appendToDisplay('+')">+</button>
             <button onclick="appendToDisplay('0')">0</button>
             <button onclick="appendToDisplay('.')">.</button>
-            <button class="equal" onclick="appendToDisplay('=')">=</button>
+            <button class="equal" onclick="calculate()">=</button>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

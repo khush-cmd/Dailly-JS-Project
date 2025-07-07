@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartSplit</title>
+</head>
+<body>
+        <div class="smart-nav">
+            <h1>Smart Split</h1>
+            <div class="smart-list">
+                <ul>
+                    <li><a href="#" onclick="showTab('bill-splitter')">Bill Splitter</a></li>
+                    <li><a href="#" onclick="showTab('tip-calculator')">Tip Calculator</a></li>
+                    <li><a href="#" onclick="showTab('discount-calculator')">Discount Calculator</a></li>
+                </ul>
+            </div>
+        </div>
+       <div class="container">
+        <div id="bill-splitter" class="card active">
+            <h2>Bill Splitter</h2>
+            <label for="bill-amount">Total Bill Amount (₹)</label>
+            <input type="number" placeholder="Enter bill Amount" step="0.01">
+            <div class="input-group">
+                <label for="number-people">Number of People</label>
+                <input type="Number" placeholder="Enter number of people" min="1">
+            </div>
+            <button onclick="calculateSplit()">Split It!</button>
+            <div id="split-result" class="result"></div>
+        </div>
+        <div id="tip-calculator" class="card-active">
+            <h2>Tip Calculator</h2>
+            <label for="bill-amount">Bill Amount (₹)</label>
+            <input type="number" placeholder="Enter bill amount" step="0.01">
+            <div class="input-group">
+                <label for="number-people">Number of People</label>
+                <input type="number" placeholder="Enter number of people" min="1">
+            </div>
+            <button id="btn">Calculate Tip</button>
+            <div id="tip-result" class="result"></div>
+        </div>
+        <div id="discount-calculator" class="card-active">
+            <h2>Discount Calculator</h2>
+            <label for="original-price">Original Price (₹)</label>
+            <input type="number" placeholder="Enter original price" step="0.01">
+            <div class="input-group">
+                <label for="discount-percentage">Discount Percentage (%)</label>
+                <input type="number" placeholder="Enter discount percentage" min="1">
+
+            </div>
+            <button id="btn">Apply Discount</button>
+            <div id="discount-result" class="result"></div>
+        </div>
+       </div>
+</body>
+</html>

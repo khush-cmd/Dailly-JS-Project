@@ -1,0 +1,114 @@
+
+
+:root{
+    --dark-space: #0d0d2b;
+    --star-glow : #ffffff;
+    --circle-blue: #00d4ff;
+    --circle-purple:  #ff00cc;
+    --glow: 0 0 20px var(--circle-blue) , 0 0 40px var(--circle-purple);
+}
+body{
+    margin: 0;
+    padding:  0;
+    box-sizing: border-box;
+    background: radial-gradient(circle , #1a1a4e , var(--dark-space));
+    width: 100%;
+    color: #fff;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    perspective: 1000px;
+}
+.welcome-container{
+    text-align: center;
+    position: relative;
+    transform-style: preserve-3d;
+}
+h1{
+    font-size: 84px;
+    color: transparent;
+    text-shadow: var(--glow);
+    background: linear-gradient(45deg, var(--circle-blue),var(--circle-purple));
+    -webkit-background-clip:text ;
+    background-clip: text;
+    animation: hologram  4s infinite;
+    transform: translateZ(50px);
+}
+@keyframes hologram{
+    0%{
+        transform: translateZ(50px) rotateY(0deg); 
+        opacity: 0.9;
+    }
+    50%{
+        transform: translateZ(70px) rotateY(5deg);
+        opacity: 1;
+    }
+    
+}
+p{
+    color: #e0e0fe;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.9rem;
+    margin: 0 auto 40px;
+    animation: fadeIn 2s ease-out;
+    transform: translateZ(20px);
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(100px) translateZ(20px);
+
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0) translateZ(20px);
+    }
+}
+.enter-btn{
+    padding: 20px 50px;
+    font-family: "DM Serif Text", serif;
+    background: transparent;
+    border: 3px solid var(--circle-blue);
+    color: var(--circle-purple);
+    font-size: 1.5rem;
+    border-radius: 14px;
+    cursor: pointer;
+    overflow: hidden;
+    transform: translateZ(30px);
+    z-index: 15;
+    transition: transform 0.4s ease,box-shadow 0.3s ease;
+}
+.enter-btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150px;
+    width: 150px;
+    height: 100px;
+    background: linear-gradient(90deg, transparent,var(--circle-blue),var(--circle-purple),transparent);
+    animation: pulseWave 3s infinite;
+    
+}
+@keyframes pulseWave {
+    0%{
+        left: -150px;
+        
+    }
+    50%{
+        left: 150px;
+    }
+    100%{
+        left: 150px;
+    }
+}
+.enter-btn:hover{
+    transform: translateZ(50px) scale(1.1);
+    box-shadow:var(--glow);
+    color: #fff;
+}
+#star-field{
+    background: var(--star-glow);
+
+}

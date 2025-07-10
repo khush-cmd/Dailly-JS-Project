@@ -71,7 +71,8 @@ p{
     font-family: "DM Serif Text", serif;
     background: transparent;
     border: 3px solid var(--circle-blue);
-    color: var(--circle-purple);
+    color: var(--circle-blue);
+    font-weight: 700;
     font-size: 1.5rem;
     border-radius: 14px;
     cursor: pointer;

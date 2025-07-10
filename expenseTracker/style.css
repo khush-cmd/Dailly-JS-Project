@@ -87,7 +87,7 @@ p{
     left: -150px;
     width: 150px;
     height: 100px;
-    background: linear-gradient(90deg, transparent,var(--circle-blue),var(--circle-purple),transparent);
+    background: linear-gradient(90deg,transparent,var(--circle-purple));
     animation: pulseWave 3s infinite;
     
 }
@@ -109,6 +109,92 @@ p{
     color: #fff;
 }
 #star-field{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+.star{
     background: var(--star-glow);
+    border-radius: 50%;
+    position: absolute;
+    animation: twinkle 3s infinite alternate;
+    box-shadow: 0 0 10px var(--star-glow);
 
+}
+@keyframes twinkle{
+    0%{
+        opacity: 0.5;
+        transform: scale(0.5);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.circle-field{
+    position: absolute;
+    background: radial-gradient(circle, rgba(0,212,255,0.4), transparent);
+    border-radius: 50%;
+    animation: orbit 12s infinite linear;
+    z-index: -1;
+}
+@keyframes orbit{
+    0%{
+        transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+}
+.orb1{
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    left: 10%;
+}
+.orb2{
+    width: 200px;
+    height: 200px;
+    bottom: 15%;
+    right: 15%;
+    animation-delay: -4s;
+}
+
+.orb3 {
+    width: 100px;
+    height: 100px;
+    top: 40%; 
+    left: 80%;
+    animation-delay: -8s; 
+}
+#particle-field{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 6;
+}
+.particle{
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: var(--circle-blue);
+    border-radius: 50%;
+    animation: drift 3s infinite linear;
+}
+@keyframes drift{
+    0%{
+        transform: translate(0 , 0);
+        opacity: 1;
+    }
+    100%{
+        transform: translate(150px,-150px);
+        opacity: 0;
+    }
 }

@@ -18,3 +18,7 @@ for(let i=0;i<=20;i++){
     particle.style.animationDelay = `-${Math.random()*3}s`;
     particleField.appendChild(particle);
 }
+function showTab(){
+    window.location.href = "dashBoard.html";
+    
+}

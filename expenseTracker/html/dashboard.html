@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bitcount+Grid+Double:wght@100..900&family=DM+Serif+Text:ital@0;1&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Matemasie&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="star-field"></div>
+    <div id="particle-field"></div>
+    <div class="dashboard">
+        <div class="title">
+        <h1>Mission Control :<span>Your Spending Universe</span></h1>
+        
+        </div>
+        <div class="money-card">
+            <div class="card">
+                <h3>Total Balance</h3>
+                <div class="balance">0</div>
+            </div>
+            <div class="card">
+                <h3>Total Spent</h3>
+                <div class="spent">0</div>
+            </div>
+            <div class="card">
+                <h3>Total Saved</h3>
+                <div class="saved">0</div>
+            </div>
+        </div>
+        <div class="btn">
+        <button class="Transaction" onclick="addMoney()"> + Add Transaction</button>
+        </div>
+        <div class="transaction-box">
+            <h3> Transaction History </h3>
+            <div class="history-table">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                    </tr>
+                    <tr>
+                        <td>Groceries</td>
+                        <td class="badge expnese">Expense</td>
+                        <td>₹ 400</td>
+                        <td>04.20.2024</td>
+                    </tr>
+                    <tr>
+                        <td>Salary</td>
+                        <td class="badge income">Expense</td>
+                        <td>₹ 400</td>
+                        <td>04.20.2024</td>
+                    </tr>
+                    <tr>
+                        <td>Utilities</td>
+                        <td class="badge expenese">Expense</td>
+                        <td>₹ 400</td>
+                        <td>04.20.2024</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script/script.js"> </script>
+</body>
+
+</html>

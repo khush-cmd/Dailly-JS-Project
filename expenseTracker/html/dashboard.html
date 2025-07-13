@@ -19,19 +19,39 @@
         <div class="money-card">
             <div class="card">
                 <h3>Total Balance</h3>
-                <div class="balance">0</div>
+                <div id="balance"  class="money">₹ 0</div>
             </div>
             <div class="card">
                 <h3>Total Spent</h3>
-                <div class="spent">0</div>
+                <div id="spent"  class="money">₹ 0</div>
             </div>
             <div class="card">
                 <h3>Total Saved</h3>
-                <div class="saved">0</div>
+                <div id="saved" class="money">₹ 0</div>
             </div>
         </div>
         <div class="btn">
-        <button class="Transaction" onclick="addMoney()"> + Add Transaction</button>
+
+            <div class="form-section">
+                <h3 class="add-title"> Add Transaction</h3>
+                <select name="" id="">
+                    <option value="">Expense</option>
+                    <option value="">Income</option>
+                </select>
+                <input type="text" placeholder="Name(e.g., Salary)">
+                <input type="number" placeholder="Amount">
+                <select name="item" id="">
+                    <option value="">Groceries</option>
+                    <option value="">Entertainment</option>
+                    <option value="">Utilities</option>
+                    <option value="">Food</option>
+                    <option value="">Rent</option>
+                </select>
+                <input type="date">
+            </div>
+            <button onclick="add()"> + Add Transaction</button>
+
+
         </div>
         <div class="transaction-box">
             <h3> Transaction History </h3>
@@ -45,7 +65,7 @@
                     </tr>
                     <tr>
                         <td>Groceries</td>
-                        <td class="badge expnese">Expense</td>
+                        <td class="badge expense">Expense</td>
                         <td>₹ 400</td>
                         <td>04.20.2024</td>
                     </tr>

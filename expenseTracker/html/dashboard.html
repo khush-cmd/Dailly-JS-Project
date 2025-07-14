@@ -22,7 +22,8 @@
                 <div id="balance"  class="money">₹ 0</div>
             </div>
             <div class="card">
-                <h3>Total Spent</h3>
+                <h3>Total Spen
+                    </h3>
                 <div id="spent"  class="money">₹ 0</div>
             </div>
             <div class="card">
@@ -34,22 +35,22 @@
 
             <div class="form-section">
                 <h3 class="add-title"> Add Transaction</h3>
-                <select name="" id="">
+                <select name="" id="type">
                     <option value="">Expense</option>
                     <option value="">Income</option>
                 </select>
-                <input type="text" placeholder="Name(e.g., Salary)">
-                <input type="number" placeholder="Amount">
-                <select name="item" id="">
+                <input id="name" type="text" placeholder="Name(e.g., Salary)">
+                <input id="amount" type="number" placeholder="Amount">
+                <select name="item" id="category">
                     <option value="">Groceries</option>
                     <option value="">Entertainment</option>
                     <option value="">Utilities</option>
                     <option value="">Food</option>
                     <option value="">Rent</option>
                 </select>
-                <input type="date">
+                <input id="date" type="date">
             </div>
-            <button onclick="add()"> + Add Transaction</button>
+            <button id="add-btn" onclick="add()"> + Add Transaction</button>
 
 
         </div>
@@ -57,12 +58,7 @@
             <h3> Transaction History </h3>
             <div class="history-table">
                 <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Amount</th>
-                        <th>Date</th>
-                    </tr>
+                    
                     <tr>
                         <td>Groceries</td>
                         <td class="badge expense">Expense</td>
@@ -72,20 +68,20 @@
                     <tr>
                         <td>Salary</td>
                         <td class="badge income">Expense</td>
-                        <td>₹ 400</td>
+                        <td>₹ 700</td>
                         <td>04.20.2024</td>
                     </tr>
                     <tr>
                         <td>Utilities</td>
                         <td class="badge expenese">Expense</td>
-                        <td>₹ 400</td>
+                        <td>₹ 900</td>
                         <td>04.20.2024</td>
                     </tr>
                 </table>
             </div>
         </div>
     </div>
-
+    <script src="../script/dashboard.js"></script>
     <script src="../script/script.js"> </script>
 </body>
 

@@ -14,6 +14,25 @@ const historyTable = document.querySelector('.history-table table');
 
 let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
 
+const categoryWrapper = document.getElementById('category');
+    typeInput.addEventListener("change",() =>{
+        if(typeInput.value === "Expense"){
+            categoryWrapper.style.display = "block";
+            categoryWrapper.style.color = "red";
+            
+        }
+        else{
+            categoryWrapper.style.display = "none";
+            categoryWrapper.style.color = "green";
+        }
+    });
+
+function deleteTransaction(index){
+    transactions.splice(index , 1);
+    localStorage.setItem("transactions",JSON.stringify(transactions));
+    updateUI();
+}
+
 function updateUI(){
     historyTable.innerHTML = `
     <tr>
@@ -34,6 +53,8 @@ function updateUI(){
         <td class="badge ${t.type.toLowerCase()}">${t.type}</td>
         <td>${t.amount}</td>
         <td>${t.date}</td>
+        <td><button class="delete-btn" date-index = "${transactions.indexOf(t)}">🗑️</button></td>
+
         `;
         historyTable.appendChild(row);
 
@@ -47,6 +68,13 @@ function updateUI(){
     balanceE1.innerText = `₹ ${(totalIncome - totalexpense)}`;
     spentE1.innerText = `₹ ${totalexpense}`;
     savedE1.innerHTML= `₹ ${totalIncome}`;
+    const deleteButtons = document.querySelectorAll(".delete-btn");
+    deleteButtons.forEach(button =>{
+        button.addEventListener("click",()=>{
+            const index = button.getAttribute("data-index");
+            deleteTransaction(index);
+        });
+    });
 }
 function addTransaction(){
     const name = nameInput.value;
@@ -54,13 +82,9 @@ function addTransaction(){
     const amount = amountInput.value;
     const date = dateInput.value;
     const category = categoryInput.value;
-
-    // edge case bari hi nhi 
-    if(!name || !amount || !date){
-        alert('please fill in all fields');
-        return;
-    }
-
+    
+    
+    
     const transaction = {
         name,
         type,
@@ -71,13 +95,15 @@ function addTransaction(){
     transactions.push(transaction);
     localStorage.setItem("transactions",JSON.stringify(transactions));
     updateUI();
-
+    
     nameInput.value = "";
     amountInput.value = "";
     dateInput.value = "";
-
+    
+    
     
 }
+
 addBtn.addEventListener("click",addTransaction);
 updateUI();
 
